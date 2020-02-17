@@ -1,0 +1,28 @@
+<h1>Listing Transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Order Date</th>
+      <%# <th>Customer</th> %>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for order <- @orders do %>
+    <tr>
+      <td><%= order.id %></td>
+      <td><%= order.inserted_at %></td>
+      <td><%= order.customer_id %></td>
+    
+      <td>
+        <span><%= link "Show", to: Routes.transaction_path(@conn, :show, order) %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Order", to: Routes.transaction_path(@conn, :new) %></span>

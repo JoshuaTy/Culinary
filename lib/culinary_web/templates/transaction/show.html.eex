@@ -1,0 +1,26 @@
+<h1>Showing a order</h1>
+
+<ul>
+
+  <li>
+    <strong>Id:</strong>
+    <%= @order.food.id %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @order.inserted_at %>
+  </li>
+
+   <li>
+    <strong>Food Name:</strong>
+    <%= @order.food.name %>
+  </li>   
+  <li>
+    <strong>Quantity:</strong>
+    <%= @order.quantity %>
+  </li>
+    
+</ul>
+
+<span><%= link "Back", to: Routes.transaction_path(@conn, :index) %></span>

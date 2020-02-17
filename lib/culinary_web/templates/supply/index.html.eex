@@ -1,0 +1,16 @@
+<h1>Listing Supplies</h1>
+<table>
+    <%= for supply <- @supplies do %>
+        <tr>
+            <td>
+            <Strong>Name: </Strong><%= supply.name%> 
+            </td>
+
+            <td>
+            <span><%= link "Show", to: Routes.supply_path(@conn, :show, supply) %></span>
+            </td>
+        </tr>
+    <% end %>
+</table>
+
+<span><%= link "Add", to: Routes.supply_path(@conn, :new)%></span>

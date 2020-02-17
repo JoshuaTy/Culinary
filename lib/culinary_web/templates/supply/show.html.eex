@@ -1,0 +1,17 @@
+<h1>Show Supply</h1>
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @supply.name %>
+  </li>
+
+  <li>
+    <strong>Quantity:</strong>
+    <%= @supply.quantity %>
+  </li>
+
+  
+</ul>
+
+<span><%= link "Back", to: Routes.supply_path(@conn, :index)%></span>
